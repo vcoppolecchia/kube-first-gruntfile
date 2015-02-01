@@ -1,5 +1,5 @@
 # Gruntfile & Kube: an example
-This is how I wrote my first Gruntfile to work comfortably with the [Kube Framework!](http://imperavi.com/kube/).
+This is how I wrote my first Gruntfile to work comfortably with the [Kube Framework](http://imperavi.com/kube/).
 In this project I set up my environment to do some automation on tasks that I was used to manually perform.
 
 ### How this Gruntfile it's made
