@@ -1,6 +1,4 @@
 module.exports = function(grunt) {
-
-    // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -9,7 +7,6 @@ module.exports = function(grunt) {
           css: 'css/kube-build.min.css'
         },
         concat: {
-            // 2. Configuration for concatinating files goes here.
             js: {
                 files: {
                     'js/kube-build.js': ['js/*.js', '!js/imagelightbox.min.js', '!js/lightbox.js'],
@@ -28,7 +25,7 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    compress: true // settato a "true" minifica il css
+                    compress: true
                 },
                 files: {
                     'css/kube-build.min.css': 'less/kube.less'
@@ -86,7 +83,6 @@ module.exports = function(grunt) {
         }
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');
@@ -94,7 +90,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['clean', 'concat', 'uglify', 'less', 'autoprefixer', 'imagemin', 'watch']);
 };
